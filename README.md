@@ -6,14 +6,14 @@ Question 1--->
 
 Output:
 
-![question_1_image](./outputs/output-questio-1.png)
+![question_1_image](./outputs/output-question-1.png)
 
 Question 2--->
 <b>Write a supplier which gives two digit random prime numbers.</b>
 
 Output:
 
-![question_2_image](./outputs/outpu-question-2.png)
+![question_2_image](./outputs/output-question-2.png)
 
 Question 3--->
 <b>Create a functional interface named Shape which contains a method calculateArea. Using this functional interface, calculate the area of rectangle and triangle.</b>
@@ -22,7 +22,7 @@ Output:
 
 ![question_3t_image](./outputs/output-question-3t.png)
 
-![question_3r_image](./outputs/output-question-3b.png)
+![question_3r_image](./outputs/output-question-3r.png)
 
 Question 4--->
 <b>Create an array list containing the names of people. Using predicate, find the name that starts with “a” or “A” and contains length no more than 5.</b>

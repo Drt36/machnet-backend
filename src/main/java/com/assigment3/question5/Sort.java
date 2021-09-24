@@ -4,7 +4,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Sort {
     public static void main(String[] args) {
@@ -15,6 +14,5 @@ public class Sort {
         System.out.println(numList);
         System.out.println("---------Numbers After Sorting--------");
         System.out.println(sortedList);
-
     }
 }

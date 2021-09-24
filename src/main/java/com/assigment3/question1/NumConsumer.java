@@ -2,43 +2,24 @@ package com.assigment3.question1;
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.IntPredicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.stream.IntStream;
 
 public class NumConsumer {
 
     public static boolean isPrime(int input){
-        int flag = 0;
-        for (int i = 1; i <=(input/2); i++) {
-            if ((input % i) == 0) {
-                flag += 1;
-            }
-        }
-        return flag==1;
-    }
-
-    public static boolean isOdd(int input){
-        int flag = 0;
-            if ((input % 2) != 0) {
-                flag = 1;
-            }
-        return flag==1;
-    }
-
-    public static boolean isEven(int input){
-        int flag = 0;
-        if ((input % 2) == 0) {
-            flag = 1;
-        }
-        return flag==1;
+        return input > 1 && IntStream.rangeClosed(2, input/ 2).noneMatch(i -> input% i == 0);
     }
 
     public static void main(String[] args) {
-        List<Integer> numList=Stream.iterate(1, num-> num + 1)
-                .limit(50).collect(Collectors.toList());
+        List<Integer> numList= IntStream.rangeClosed(1, 50).boxed().collect(Collectors.toList());
 
-        Consumer<List<Integer>> oddNumList=list->list.stream().filter(num->isOdd(num)).forEach(num->System.out.print(num+" "));
-        Consumer<List<Integer>> evenNumList=list->list.stream().filter(num->isEven(num)).forEach(num->System.out.print(num+" "));
+        IntPredicate isOdd = input-> input % 2 != 0;
+        IntPredicate isEven = input-> input % 2 ==0;
+
+        Consumer<List<Integer>> oddNumList=list->list.stream().filter(num->isOdd.test(num)).forEach(num->System.out.print(num+" "));
+        Consumer<List<Integer>> evenNumList=list->list.stream().filter(num->isEven.test(num)).forEach(num->System.out.print(num+" "));
         Consumer<List<Integer>> primeNumList=list->list.stream().filter(num->isPrime(num)).forEach(num->System.out.print(num+" "));
 
         System.out.println("------Odd Numbers-----");

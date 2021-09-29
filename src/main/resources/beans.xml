@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!--bean for task 1-->
+        <import resource="beanstask1.xml"></import>
+
+        <!--bean for task 2-->
+        <import resource="beanstask2.xml"></import>
+
+        <!--bean for task 3-->
+        <import resource="beanstask3.xml"></import>
+
+        <!--bean for task 4-->
+        <import resource="beanstask4.xml"></import>
+</beans>

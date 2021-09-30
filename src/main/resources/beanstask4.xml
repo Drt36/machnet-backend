@@ -6,17 +6,17 @@
         <property name="address" value="KTM"></property>
     </bean>
 
-<!--    <bean name="student" class="com.springtask4.Student" autowire="byName">-->
+    <bean name="student" class="com.springtask4.Student" autowire="byName">
 
-<!--    </bean>-->
+    </bean>
 
 <!--    <bean name="student" class="com.springtask4.Student" autowire="byType">-->
 
 <!--    </bean>-->
 
-    <bean name="student" class="com.springtask4.Student" autowire="constructor">
-        <property name="studentId" value="1"></property>
-        <property name="studentName" value="DRT"></property>
-    </bean>
+<!--    <bean name="student" class="com.springtask4.Student" autowire="constructor">-->
+<!--        <property name="studentId" value="1"></property>-->
+<!--        <property name="studentName" value="DRT"></property>-->
+<!--    </bean>-->
 
 </beans>

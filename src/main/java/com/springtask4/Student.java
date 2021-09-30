@@ -7,6 +7,9 @@ public class Student {
     private String studentName;
     private Address address;
 
+    public Student() {
+    }
+
     public Student(Address address) {
         this.address = address;
     }
